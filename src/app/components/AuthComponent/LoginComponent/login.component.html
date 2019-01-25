@@ -3,7 +3,9 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
       <section class="login-form">
-        <form method="post" action="#" role="login">
+       
+        <form method="post" #loginForm="ngForm" (ngSubmit)="onLogin( loginForm )" role="login">
+            <span >{{this.authMsg}}</span>
           <img
             src="http://i.imgur.com/RcmcLv4.png"
             class="img-responsive"
@@ -13,14 +15,19 @@
             type="email"
             name="email"
             placeholder="Email"
+            name="email"
+            [(ngModel)]="user.email"
+            #userEmail="ngModel"
             required
             class="form-control input-lg"
-            value="joestudent@gmail.com"
           />
           <input
             type="password"
             class="form-control input-lg"
             id="password"
+            [(ngModel)]="user.password"
+            name="password"
+            #userPassword="ngModel"
             placeholder="Password"
             required=""
           />

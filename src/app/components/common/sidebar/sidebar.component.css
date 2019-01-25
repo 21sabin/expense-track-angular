@@ -1,0 +1,18 @@
+.wrapper {
+ width: 300px;
+ padding:30px;
+ background-color:#7386D5;;
+ height: 100vh;
+}
+h1{
+  color:white
+}
+li a{
+  color:white
+}
+
+i{
+ width:50px !important;
+ height: 50px !important
+}
+
