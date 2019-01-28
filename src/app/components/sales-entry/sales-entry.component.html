@@ -1,3 +1,64 @@
-<p>
-  sales-entry works!
-</p>
+<div class="sales-entry">
+  <div id="sales"><h1>Sales Entry Form</h1></div>
+  <!-- <form class="form-inline">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="particular" class="sr-only">Particular</label>
+        <input type="text" class="form-control" id="inputPassword2" placeholder="Particular">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Rate</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Rate">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <button type="submit" class="btn btn-info"><i class="fas fa-arrow-circle-right"></i>Add Sales</button>
+      </div>
+    </form> -->
+
+  <form>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Particular</label>
+          <input
+            type="particular"
+            class="form-control"
+            placeholder="Particular"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Rate</label>
+          <input
+            type="number"
+            class="form-control"
+            i
+            aria-describedby="rate"
+            placeholder="rate"
+          />
+        </div>
+      </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Date</label>
+              <input
+                type="text"
+                name="date"
+                value="{{currentDate}}"
+                class="form-control"
+                disabled
+                placeholder="date"
+              />
+            </div>
+          </div>
+    </div>
+    <div class="form-group">
+        <label for="remarks">Remarks</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" cols="10" rows="3" ></textarea>
+      </div>
+    <button type="submit" class="btn btn-info"><i class="fas fa-arrow-circle-right"></i>Add Sales</button>
+
+  </form>
+</div>
