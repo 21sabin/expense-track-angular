@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
     this.user.email = form.value.email;
     this.user.password = form.value.password ; 
     this.userService.login( this.user ).subscribe(response=>{
-      console.log(response.success,"00")
-      if( response.success ){
-        this.router.navigateByUrl('dashboard') 
+      console.log( response, "--")
+      if( response.succes ){
+        localStorage.setItem('user', JSON.stringify(response ));
+        this.router.navigateByUrl('dashboard/sales-entry') 
       }else{
         this.authFlag = false;
         this.authMsg = "Authentication failed ."
-      }
-       
+      }     
     },error=>{
       console.log(error)
     })
